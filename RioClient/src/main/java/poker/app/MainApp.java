@@ -236,10 +236,10 @@ public class MainApp extends Application {
 		@Override
 		protected void messageReceived(final Object message) {
 			Platform.runLater(() -> {
-				System.out.println("Message Received.  The message: " + message);
+				System.out.println(message);
 
 				if (message instanceof String) {
-					System.out.println("Message Received " + message);
+					System.out.println(message);
 				} else if (message instanceof Table) {
 					pokerController.Handle_TableState((Table) message);
 				}
