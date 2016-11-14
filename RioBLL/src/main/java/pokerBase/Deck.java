@@ -57,7 +57,6 @@ public class Deck implements Serializable  {
 
 		}
 
-		// Work to do! Make the existing Deck cards Wild...
 
 	}
 
@@ -79,11 +78,7 @@ public class Deck implements Serializable  {
 		return deckCards;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see pokerBase.iDeck#Draw()
-	 */
+
 	public Card Draw() throws DeckException {
 		if (deckCards.size() == 0) {
 			throw new DeckException(this, eDeckExceptionType.OverDraw);

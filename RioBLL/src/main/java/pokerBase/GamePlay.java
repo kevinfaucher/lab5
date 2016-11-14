@@ -197,7 +197,6 @@ public class GamePlay implements Serializable   {
 				}
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
-			// Whoops! Asking for something beyond the size of the array
 			iNextPosition = iOrder[0];
 		}
 
