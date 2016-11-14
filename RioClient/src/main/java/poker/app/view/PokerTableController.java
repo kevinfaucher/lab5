@@ -242,16 +242,16 @@ public class PokerTableController implements Initializable {
 		Button btnFold = (Button) event.getSource();
 		switch (btnFold.getId().toString()) {
 		case "btnPlayer1Fold":
-			// Fold for Player 1
+			// Fold Player 1
 			break;
 		case "btnPlayer2Fold":
-			// Fold for Player 2
+			// Fold Player 2
 			break;
 		case "btnPlayer3Fold":
-			// Fold for Player 3
+			// Fold Player 3
 			break;
 		case "btnPlayer4Fold":
-			// Fold for Player 4
+			// Fold Player 4
 			break;
 
 		}
@@ -262,16 +262,16 @@ public class PokerTableController implements Initializable {
 		Button btnCheck = (Button) event.getSource();
 		switch (btnCheck.getId().toString()) {
 		case "btnPlayer1Check":
-			// Check for Player 1
+			// Check Player 1
 			break;
 		case "btnPlayer2Check":
-			// Check for Player 2
+			// Check Player 2
 			break;
 		case "btnPlayer3Check":
-			// Check for Player 3
+			// Check Player 3
 			break;
 		case "btnPlayer4Check":
-			// Check for Player 4
+			// Check Player 4
 			break;
 		}
 	}
