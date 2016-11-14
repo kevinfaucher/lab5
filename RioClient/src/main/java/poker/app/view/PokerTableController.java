@@ -124,7 +124,6 @@ public class PokerTableController implements Initializable {
 			iPlayerPosition = 0;
 		}
 
-		// Settin the PlayerPosition
 		mainApp.getPlayer().setiPlayerPosition(iPlayerPosition);
 
 		Action act = new Action(btnSitLeave.isSelected() ? eAction.Sit : eAction.Leave, mainApp.getPlayer());
