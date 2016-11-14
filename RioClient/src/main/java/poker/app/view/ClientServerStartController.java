@@ -90,7 +90,7 @@ public class ClientServerStartController implements Initializable {
 		Platform.exit();
 		System.exit(0);
 
-		System.out.println("End Program");
+		System.out.println("Program Terminated");
 
 	}
 

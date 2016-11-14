@@ -51,21 +51,18 @@ public class PokerHub extends Hub {
 	protected void messageReceived(int ClientID, Object message) {
 
 		if (message instanceof Action) {
-			Action act = (Action) message; // Part 4
+			Action act = (Action) message; 
 
-			// Part 4
 			if (act.getAction() == eAction.StartGame) {
 
 			}
 
-			// Part 4
 			else if (act.getAction() == eAction.Sit) {
 				HubPokerTable.AddPlayerToTable(act.getPlayer());
 				sendToAll(HubPokerTable);
 
 			}
 
-			// Part 4
 			else if (act.getAction() == eAction.Leave) {
 				HubPokerTable.RemovePlayerFromTable(act.getPlayer());
 				sendToAll(HubPokerTable);
@@ -74,9 +71,9 @@ public class PokerHub extends Hub {
 
 		}
 
-		System.out.println("Message Received by Hub");
+		System.out.println("Hub Message Received");
 
-		sendToAll("Sending Message Back to Client");
+		sendToAll("Message sent Back to Client");
 	}
 
 }

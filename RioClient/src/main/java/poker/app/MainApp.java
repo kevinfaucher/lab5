@@ -69,23 +69,19 @@ public class MainApp extends Application {
 
 	@Override
 	public void init() throws Exception {
-		// INIT is executed by the Application framework FIRST
-		// connection.startConnection();
+
 	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		// START is executed by the Application framework after INIT
 		BorderPane root = new BorderPane();
 		Scene scene = new Scene(root, 500, 500);
 
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Poker");
 
-		// Set the application icon.
-		// this.primaryStage.getIcons().add(new
-		// Image(getClass().getResourceAsStream("/img/26.png")));
+
 
 		this.primaryStage.setScene(scene);
 		this.primaryStage.show();
@@ -128,7 +124,7 @@ public class MainApp extends Application {
 
 			primaryStage.setScene(scene);
 
-			// Give the controller access to the main app.
+			// Controller access to the main app.
 			ClientServerStartController controller = loader.getController();
 			controller.setMainApp(this);
 
@@ -148,17 +144,16 @@ public class MainApp extends Application {
 			primaryStage.setWidth(bounds.getWidth());
 			primaryStage.setHeight(bounds.getHeight());
 
-			// Load root layout from fxml file.
+			// Load root layout
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("view/RootLayout.fxml"));
 			rootLayout = (BorderPane) loader.load();
 
-			// Show the scene containing the root layout.
+			//root layout.
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
 
-			// Give the controller access to the main app.
-			// RootLayoutController controller = loader.getController();
+			//Controller access to the main app.
 			rootController = loader.getController();
 
 			rootController.setMainApp(this);
@@ -176,11 +171,9 @@ public class MainApp extends Application {
 			loader.setLocation(MainApp.class.getResource("view/PokerTable.fxml"));
 			BorderPane pokerOverview = (BorderPane) loader.load();
 
-			// Set person overview into the center of root layout.
 			rootLayout.setCenter(pokerOverview);
 
-			// Give the controller access to the main app.
-			// PokerTableController controller = loader.getController();
+			// Controller access to the main app.
 			pokerController = loader.getController();
 			pokerController.setMainApp(this);
 
@@ -209,7 +202,7 @@ public class MainApp extends Application {
 	}
 
 	public void messageSend(final Object message) {
-		System.out.println("Sending message from MainApp");
+		System.out.println("Message Sent");
 		pClient.messageSend(message);
 	}
 
@@ -227,11 +220,10 @@ public class MainApp extends Application {
 		 * messageSend - One single place to send messages
 		 */
 		protected void messageSend(Object message) {
-			System.out.println("Sending message from MainApp.Client");
+			System.out.println("Message sent from MainApp.Client");
 			resetOutput();
 			super.send(message);
 		}
-
 
 		@Override
 		protected void messageReceived(final Object message) {
@@ -248,8 +240,10 @@ public class MainApp extends Application {
 		}
 
 		@Override
+		
 		/*
-		 * serverShutdown - Call the hard exit.
+		 * serverShutdown 
+		 *  Call exit.
 		 */
 		protected void serverShutdown(String message) {
 

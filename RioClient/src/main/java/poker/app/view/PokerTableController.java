@@ -124,13 +124,11 @@ public class PokerTableController implements Initializable {
 			iPlayerPosition = 0;
 		}
 
-		// Set the PlayerPosition in the Player
+		// Settin the PlayerPosition
 		mainApp.getPlayer().setiPlayerPosition(iPlayerPosition);
 
-		// Build an Action message
 		Action act = new Action(btnSitLeave.isSelected() ? eAction.Sit : eAction.Leave, mainApp.getPlayer());
 
-		// Send the Action to the Hub
 		mainApp.messageSend(act);
 	}
 
@@ -145,7 +143,6 @@ public class PokerTableController implements Initializable {
 		lblPos3Name.setText("");
 		lblPos4Name.setText("");
 
-		// scanInputControls(OuterBorderPane, "SitLeave",true);
 
 		btnPos1SitLeave.setVisible(true);
 		btnPos2SitLeave.setVisible(true);
