@@ -71,9 +71,9 @@ public class PokerHub extends Hub {
 
 		}
 
-		System.out.println("Hub Message Received");
+		System.out.println("Hub Message has been Received");
 
-		sendToAll("Message sent Back to Client");
+		sendToAll("Message sent Back to the Client");
 	}
 
 }
